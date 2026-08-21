@@ -429,29 +429,24 @@ footer .foot-inner{position:fixed;bottom:12px;left:28px;z-index:60;color:#8b8b8b
           filings, tracks shares outstanding against a verified baseline to measure
           how fast companies are issuing stock, extracts financing terms with an LLM
           and ties them to the financiers behind them, and ranks everything with a
-          composite score the user can tune. Shipped in phased releases and validated
-          with a backtest.</p>
-          <div class="chips"><span class="chip">TypeScript</span><span class="chip">Next.js</span><span class="chip">FMP</span><span class="chip">SEC Filings</span><span class="chip">LLM Extraction</span><span class="chip">Postgres</span></div>
-        </div>
-        <div class="card">
-          <div class="role">Data quality</div>
-          <h4><span class="metric">Found and fixed the bad data under the screener.</span></h4>
-          <p>The screener's stock database was polluted: nearly 7,800 funds and trusts
-          were being treated as operating companies, and a ticker-format bug had
-          silently dropped 689 real ones. I audited every data source the screener ingests,
-          purged the junk, recovered the lost companies, and checked the short-borrow
-          data against outside references. The screen went from noisy to
-          trustworthy.</p>
-          <div class="chips"><span class="chip">Data Auditing</span><span class="chip">Feed Verification</span></div>
+          composite score the user can tune. Along the way I audited every data source
+          it ingests: nearly 7,800 funds and trusts had been treated as operating
+          companies and a ticker-format bug had silently dropped 689 real ones, so I
+          purged the junk, recovered the lost companies, and checked short-borrow data
+          against outside references. Shipped in phased releases and validated with a
+          backtest.</p>
+          <div class="chips"><span class="chip">TypeScript</span><span class="chip">Next.js</span><span class="chip">FMP</span><span class="chip">SEC Filings</span><span class="chip">LLM Extraction</span><span class="chip">Postgres</span><span class="chip">Data Auditing</span></div>
         </div>
         <div class="card">
           <div class="role">Sole builder · 100% of commits</div>
-          <h4><span class="metric">Backtests any FinTwit account's stock picks, at 15% of the original cost.</span></h4>
+          <h4><span class="metric">Backtests any FinTwit account's stock picks, cheaply and at scale.</span></h4>
           <p>A tool that scores whether a public X account's stock calls have actually
           made money. It pulls full posting history (with fallbacks for accounts X
           hides from search), extracts the calls with an LLM, prices each one across
-          horizons from a day to a year, and rebuilds reports from cache at no cost.
-          Runs as a hosted web app with 16 test modules behind it.</p>
+          horizons from a day to a year, and caches everything so reports rebuild
+          for free. A cheap-primary, strong-spot-check model stack keeps it affordable
+          to run across many accounts. Runs as a hosted web app with 16 test modules
+          behind it.</p>
           <div class="chips"><span class="chip">Python</span><span class="chip">X API</span><span class="chip">DeepSeek + Claude</span><span class="chip">FMP</span><span class="chip">Render</span></div>
         </div>
       </div>
@@ -502,15 +497,6 @@ footer .foot-inner{position:fixed;bottom:12px;left:28px;z-index:60;color:#8b8b8b
           dollar-volume band filters and wired the 13F builder into the platform,
           gated to firm admins.</p>
           <div class="chips"><span class="chip">postal-mime</span><span class="chip">ExcelJS</span><span class="chip">Claude API</span><span class="chip">Best-Ex</span></div>
-        </div>
-        <div class="card">
-          <div class="role">Security hardening</div>
-          <h4><span class="metric">Password logins removed. The platform is Google SSO only.</span></h4>
-          <p>Auth and reliability passes across the compliance platform: removed
-          master-password sign-in entirely, denied admin rights to self-declared
-          sessions, closed dev-open cron endpoints, made notification actions safe
-          under double-submit, and batched query waterfalls on slow pages.</p>
-          <div class="chips"><span class="chip">Auth</span><span class="chip">Google SSO</span><span class="chip">Idempotency</span><span class="chip">Performance</span></div>
         </div>
       </div>
     </div>
