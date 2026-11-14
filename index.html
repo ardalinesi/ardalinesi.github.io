@@ -287,7 +287,7 @@ footer .foot-inner{position:fixed;bottom:12px;left:28px;z-index:60;color:#8b8b8b
   <div class="hero">
     <div class="h-giant">Ardal<br>Inesi</div>
     <div class="tag">
-      Militia is <b>one of the most automated investment firms in the US</b>,
+      Militia (Investments, Capital Management) is <b>one of the most automated investment firms in the US</b>,
       and I built much of what makes it so. As its automation and AI intern I built
       the investor portal, short screener, regulatory filing tools, and compliance
       monitors that let two funds run with <b>almost no manual work</b>.
@@ -327,6 +327,7 @@ footer .foot-inner{position:fixed;bottom:12px;left:28px;z-index:60;color:#8b8b8b
             <li>I write the spec first. PRDs, phased plans, and coverage matrices before code.</li>
             <li>I check data against independent sources and keep changelogs for everything.</li>
             <li>I keep LLM costs low without giving up output quality.</li>
+            <li>I direct AI coding agents, mainly Claude Code, and verify everything they produce.</li>
             <li>I know the regulated side of finance: SEC filings, marketing review, records retention, investor onboarding.</li>
           </ul>
         </div>
@@ -365,73 +366,14 @@ footer .foot-inner{position:fixed;bottom:12px;left:28px;z-index:60;color:#8b8b8b
     <div class="h-sub">Production systems I built for two live funds, plus what I have built since. The firm's repositories are private, but I can explain the design of any of them.</div>
 
     <div class="tabs" role="tablist">
-      <button class="tab active" data-pane="p-auto">Automation</button>
-      <button class="tab" data-pane="p-trade">Trading &amp; Research</button>
-      <button class="tab" data-pane="p-plat">Platforms &amp; Compliance</button>
-      <button class="tab" data-pane="p-ai">AI Systems</button>
+      <button class="tab active" data-pane="p-inv">Investing</button>
+      <button class="tab" data-pane="p-comp">Compliance</button>
+      <button class="tab" data-pane="p-lp">Investor Platforms</button>
       <button class="tab" data-pane="p-ind">Independent</button>
     </div>
 
-    <!-- AUTOMATION -->
-    <div class="tabpane show" id="p-auto">
-      <p class="pane-desc">Recurring firm work I turned into systems that run on their own.
-      Each of these surfaces only the decisions that need a person.</p>
-      <div class="cards">
-        <div class="card">
-          <div class="role">Co-built · regenerates in one click</div>
-          <h4><span class="metric">The LP deck and monthly factsheet rebuild themselves from live fund data.</span></h4>
-          <p>I co-built the hedge fund's marketing materials and automated their
-          upkeep. A pipeline pulls current fund data, lays out the monthly factsheet
-          with charts, assembles the LP deck, and publishes both. One click
-          regenerates everything, so new editions go out without anyone touching a
-          design tool.</p>
-          <div class="chips"><span class="chip">TypeScript</span><span class="chip">FMP</span><span class="chip">Charting</span><span class="chip">HTML→PDF</span></div>
-        </div>
-        <div class="card">
-          <div class="role">Sole builder · PRD to production in days</div>
-          <h4><span class="metric">Six SEC sources condensed into one weekly email.</span></h4>
-          <p>A regulation-change monitor that scrapes SEC press releases, rule filings,
-          and risk alerts, runs an LLM relevance classifier, dedups against a ledger,
-          and sends a formatted digest. It runs on a cloud cron and logs full
-          tracebacks when a source breaks. Nobody at the firm reads SEC feeds by hand
-          anymore.</p>
-          <div class="chips"><span class="chip">Python</span><span class="chip">Claude API</span><span class="chip">Render Cron</span></div>
-        </div>
-        <div class="card">
-          <div class="role">Sole builder · scheduled daily</div>
-          <h4><span class="metric">Every public post archived and screened, daily.</span></h4>
-          <p>An X/Twitter archiver and compliance classifier for firm principals'
-          public accounts. It captures long-form text, groups tweets into threads,
-          screens them against marketing-rule criteria with an LLM, routes flagged
-          items to a Google Chat clearance workflow, and keeps an append-only archive
-          log.</p>
-          <div class="chips"><span class="chip">Python</span><span class="chip">X API</span><span class="chip">Claude API</span><span class="chip">Google Chat</span></div>
-        </div>
-        <div class="card">
-          <div class="role">Sole builder · quarterly filings</div>
-          <h4><span class="metric">13F filing tables generated straight from position data.</span></h4>
-          <p>A Form 13F-HR information-table builder: schema-validated XML from
-          position data, a cloud-cron ingest worker on serverless Postgres, and
-          automated email delivery of the finished file. Tested and reproducible. A
-          quarterly filing task became generate, review, submit.</p>
-          <div class="chips"><span class="chip">Python</span><span class="chip">XML Schema</span><span class="chip">Neon Postgres</span><span class="chip">Render Cron</span></div>
-        </div>
-        <div class="card">
-          <div class="role">Document engineering</div>
-          <h4><span class="metric">Checkbox-level QA on a regulated document set.</span></h4>
-          <p>A branded typesetting pipeline and audit workflow for a confidential set
-          of investor documents. Every layout change gets verified against the
-          original page renders, print bookmarks are checked, and a changelog records
-          each fix.</p>
-          <div class="chips"><span class="chip">HTML→PDF</span><span class="chip">Typesetting</span><span class="chip">Audit Workflow</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- TRADING -->
-    <div class="tabpane" id="p-trade">
-      <p class="pane-desc">The screening and research tools I built for the desk.
-      Strategy details are deliberately vague.</p>
+    <div class="tabpane show" id="p-inv">
+      <p class="pane-desc">Tools I built for the desk to source and test trade ideas. Strategy details are deliberately vague.</p>
       <div class="cards">
         <div class="card">
           <div class="role">Architect &amp; builder · replaced a paid product</div>
@@ -461,10 +403,52 @@ footer .foot-inner{position:fixed;bottom:12px;left:28px;z-index:60;color:#8b8b8b
       </div>
     </div>
 
-    <!-- PLATFORMS -->
-    <div class="tabpane" id="p-plat">
-      <p class="pane-desc">Investor-facing and back-office platforms where mistakes have
-      regulatory consequences.</p>
+    <div class="tabpane" id="p-comp">
+      <p class="pane-desc">The firm's recurring regulatory work, turned into systems that run on a schedule. In each one the model does the volume work and a person makes every final call, with decisions logged for audit.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="role">Sole builder · PRD to production in days</div>
+          <h4><span class="metric">Six SEC sources condensed into one weekly email.</span></h4>
+          <p>A regulation-change monitor that scrapes SEC press releases, rule filings,
+          and risk alerts, runs an LLM relevance classifier, dedups against a ledger,
+          and sends a formatted digest. It runs on a cloud cron and logs full
+          tracebacks when a source breaks. Nobody at the firm reads SEC feeds by hand
+          anymore.</p>
+          <div class="chips"><span class="chip">Python</span><span class="chip">Claude API</span><span class="chip">Render Cron</span></div>
+        </div>
+        <div class="card">
+          <div class="role">Sole builder · scheduled daily</div>
+          <h4><span class="metric">Every public post archived and screened, daily.</span></h4>
+          <p>An X/Twitter archiver and compliance classifier for firm principals'
+          public accounts. It captures long-form text, groups tweets into threads,
+          screens them against marketing-rule criteria with an LLM, routes flagged
+          items to a Google Chat clearance workflow, and keeps an append-only archive
+          log.</p>
+          <div class="chips"><span class="chip">Python</span><span class="chip">X API</span><span class="chip">Claude API</span><span class="chip">Google Chat</span></div>
+        </div>
+        <div class="card">
+          <div class="role">Sole builder · review tooling</div>
+          <h4><span class="metric">Email review: mailbox export in, finished workpaper out.</span></h4>
+          <p>Upload a raw .mbox export and get back a statistically sampled,
+          LLM-classified XLSX workpaper. I also built a best-execution monitor with
+          dollar-volume band filters and wired the 13F builder into the platform,
+          gated to firm admins.</p>
+          <div class="chips"><span class="chip">Claude API</span><span class="chip">Statistical sampling</span><span class="chip">Excel workpaper</span><span class="chip">Best-Ex</span></div>
+        </div>
+        <div class="card">
+          <div class="role">Sole builder · quarterly filings</div>
+          <h4><span class="metric">13F filing tables generated straight from position data.</span></h4>
+          <p>A Form 13F-HR information-table builder: schema-validated XML from
+          position data, a cloud-cron ingest worker on serverless Postgres, and
+          automated email delivery of the finished file. Tested and reproducible. A
+          quarterly filing task became generate, review, submit.</p>
+          <div class="chips"><span class="chip">Python</span><span class="chip">XML Schema</span><span class="chip">Neon Postgres</span><span class="chip">Render Cron</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tabpane" id="p-lp">
+      <p class="pane-desc">What the funds' investors see and sign: the portal, onboarding, and marketing materials.</p>
       <div class="cards">
         <div class="card">
           <div class="role">Sole builder · live with real investors</div>
@@ -489,64 +473,27 @@ footer .foot-inner{position:fixed;bottom:12px;left:28px;z-index:60;color:#8b8b8b
           <div class="chips"><span class="chip">TypeScript</span><span class="chip">Postgres</span><span class="chip">E-sign</span><span class="chip">Questionnaire logic</span></div>
         </div>
         <div class="card">
-          <div class="role">Sole builder · review tooling</div>
-          <h4><span class="metric">Email review: mailbox export in, finished workpaper out.</span></h4>
-          <p>Upload a raw .mbox export and get back a statistically sampled,
-          LLM-classified XLSX workpaper. I also built a best-execution monitor with
-          dollar-volume band filters and wired the 13F builder into the platform,
-          gated to firm admins.</p>
-          <div class="chips"><span class="chip">Claude API</span><span class="chip">Statistical sampling</span><span class="chip">Excel workpaper</span><span class="chip">Best-Ex</span></div>
+          <div class="role">Co-built · regenerates in one click</div>
+          <h4><span class="metric">The LP deck and monthly factsheet rebuild themselves from live fund data.</span></h4>
+          <p>I co-built the hedge fund's marketing materials and automated their
+          upkeep. A pipeline pulls current fund data, lays out the monthly factsheet
+          with charts, assembles the LP deck, and publishes both. One click
+          regenerates everything, so new editions go out without anyone touching a
+          design tool.</p>
+          <div class="chips"><span class="chip">TypeScript</span><span class="chip">FMP</span><span class="chip">Charting</span><span class="chip">HTML→PDF</span></div>
+        </div>
+        <div class="card">
+          <div class="role">Document engineering</div>
+          <h4><span class="metric">Checkbox-level QA on a regulated document set.</span></h4>
+          <p>A branded typesetting pipeline and audit workflow for a confidential set
+          of investor documents. Every layout change gets verified against the
+          original page renders, print bookmarks are checked, and a changelog records
+          each fix.</p>
+          <div class="chips"><span class="chip">HTML→PDF</span><span class="chip">Typesetting</span><span class="chip">Audit Workflow</span></div>
         </div>
       </div>
     </div>
 
-    <!-- AI -->
-    <div class="tabpane" id="p-ai">
-      <p class="pane-desc">Where LLMs run in the production systems I built: classification,
-      extraction, and grading steps inside pipelines, each with a verification layer.</p>
-      <div class="cards">
-        <div class="card">
-          <div class="role">Structured extraction</div>
-          <h4><span class="metric">Reads financing terms out of raw SEC filings.</span></h4>
-          <p>The extraction stage inside the dilution screener. It parses offering
-          documents for warrant, convertible, and equity-line terms, ties each
-          instrument to the financier behind it, and feeds a watchlist and the
-          composite score. Results get reconciled against deterministic filing data
-          to catch mistakes.</p>
-          <div class="chips"><span class="chip">Claude API</span><span class="chip">Structured Output</span><span class="chip">Reconciliation</span></div>
-        </div>
-        <div class="card">
-          <div class="role">Cost engineering</div>
-          <h4><span class="metric">Cut LLM spend about 85% with a cross-checked two-model stack.</span></h4>
-          <p>The backtester's classification runs on a cheap primary model. A stronger
-          model spot-checks samples for drift and a gap backstop catches misses, so
-          quality holds while per-run cost drops to a fraction. Every run also
-          carries its own spend cap.</p>
-          <div class="chips"><span class="chip">DeepSeek</span><span class="chip">Claude API</span><span class="chip">Cross-validation</span><span class="chip">Spend Guards</span></div>
-        </div>
-        <div class="card">
-          <div class="role">Human-in-the-loop design</div>
-          <h4><span class="metric">The model flags. A person clears.</span></h4>
-          <p>My compliance classifiers are built around a clearance loop: the model
-          screens regulatory items and public posts, only flagged items reach a
-          reviewer, and every decision lands in an auditable log. The model does the
-          volume work and a person makes every final call.</p>
-          <div class="chips"><span class="chip">Claude API</span><span class="chip">Google Chat</span><span class="chip">Audit Trails</span></div>
-        </div>
-        <div class="card">
-          <div class="role">AI-native workflow</div>
-          <h4><span class="metric">I direct AI coding agents, and I verify everything they produce.</span></h4>
-          <p>I build mainly with Claude Code: multi-agent workflows, few-shot
-          examples, pre- and post-tool-use hooks, and deliberate context management.
-          My repos read like build logs, with numbered phase commits from PRD to
-          production, audit passes, and handoff docs. I lean on the tools hard and
-          check the output myself, which is why one person can ship this much.</p>
-          <div class="chips"><span class="chip">Claude Code</span><span class="chip">Multi-agent workflows</span><span class="chip">PRD-first</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- INDEPENDENT -->
     <div class="tabpane" id="p-ind">
       <p class="pane-desc">What I have built on my own since leaving Militia in August 2026.</p>
       <div class="cards">
