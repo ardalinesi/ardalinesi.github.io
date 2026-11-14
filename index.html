@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ardal Inesi — Automation & Systems Engineering</title>
-<meta name="description" content="Ardal Inesi built the automation behind Militia Capital, one of the most automated investment firms in the world: pipelines, screeners, investor platforms, and AI systems.">
+<title>Ardal Inesi | Automation and AI Systems</title>
+<meta name="description" content="Ardal Inesi built the automation and AI tooling behind Militia, one of the most automated investment firms in the US: investor platforms, screeners, regulatory filings, and LLM pipelines.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Michroma&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -287,10 +287,10 @@ footer .foot-inner{position:fixed;bottom:12px;left:28px;z-index:60;color:#8b8b8b
   <div class="hero">
     <div class="h-giant">Ardal<br>Inesi</div>
     <div class="tag">
-      Militia Capital is <b>one of the most automated investment firms in the world</b>,
-      and I helped make it that way. I built the investor platforms, short screeners,
-      regulatory filings, compliance monitors, and marketing systems that let the fund
-      run with <b>almost no manual work</b>.
+      Militia is <b>one of the most automated investment firms in the US</b>,
+      and I built much of what makes it so. As its automation and AI intern I built
+      the investor portal, short screener, regulatory filing tools, and compliance
+      monitors that let two funds run with <b>almost no manual work</b>.
     </div>
     <div class="stats">
       <div class="stat"><div class="n">300+</div><div class="l">Production commits in 8 weeks</div></div>
@@ -305,15 +305,17 @@ footer .foot-inner{position:fixed;bottom:12px;left:28px;z-index:60;color:#8b8b8b
   <!-- ABOUT -->
   <section id="about">
     <div class="h-section">About</div>
-    <div class="h-sub">Former systems engineer · Militia Capital (long/short equity fund) · 2026</div>
+    <div class="h-sub">Automation and AI Intern · Militia Investments and Militia Capital Management · Mar to Aug 2026</div>
     <div class="panel">
       <div class="cols">
         <div>
           <h3>What I Did</h3>
-          <p>I built and ran the automation at Militia Capital: the portal its investors
-          log into, the screener the desk uses to find shorts, the tool that builds its
-          regulatory filings, the monitors that track the SEC, and the pipeline that
-          rebuilds its marketing materials from live fund data every month.</p>
+          <p>Militia runs two affiliated SEC-registered advisers: one sub-advises a
+          long/short equity ETF and the other advises a long/short equity hedge fund.
+          I built the automation behind both: the portal investors log into, the
+          screener the desk uses to find shorts, the tool that builds regulatory
+          filings, the monitors that track the SEC, and the pipeline that rebuilds
+          the marketing materials from live fund data.</p>
           <p>All of that used to be somebody's recurring manual work. Now it runs on a
           schedule and gets audited. When something at the firm still needed a person
           doing it by hand every week, that usually became my next project.</p>
@@ -329,6 +331,15 @@ footer .foot-inner{position:fixed;bottom:12px;left:28px;z-index:60;color:#8b8b8b
           </ul>
         </div>
       </div>
+    </div>
+    <div class="panel" style="margin-top:16px">
+      <h3>Now</h3>
+      <p>I am a junior at the University of Texas at Austin, studying Plan II Honors
+      and Economics with a minor in Business Foundations, GPA 3.85. I am spending
+      fall 2026 on exchange at Bocconi University in Milan, where I am building a
+      private credit dataset with researchers.</p>
+      <p style="margin-bottom:0">I am seeking a summer 2027 internship in applied AI,
+      automation, or platform engineering.</p>
     </div>
   </section>
 
@@ -351,13 +362,14 @@ footer .foot-inner{position:fixed;bottom:12px;left:28px;z-index:60;color:#8b8b8b
   <!-- PROJECTS -->
   <section id="projects">
     <div class="h-section">Projects</div>
-    <div class="h-sub">Production systems I built for a live fund. The repos are private, but I can walk through any of them on request.</div>
+    <div class="h-sub">Production systems I built for two live funds, plus what I have built since. The firm's repositories are private, but I can explain the design of any of them.</div>
 
     <div class="tabs" role="tablist">
       <button class="tab active" data-pane="p-auto">Automation</button>
       <button class="tab" data-pane="p-trade">Trading &amp; Research</button>
       <button class="tab" data-pane="p-plat">Platforms &amp; Compliance</button>
       <button class="tab" data-pane="p-ai">AI Systems</button>
+      <button class="tab" data-pane="p-ind">Independent</button>
     </div>
 
     <!-- AUTOMATION -->
@@ -366,14 +378,14 @@ footer .foot-inner{position:fixed;bottom:12px;left:28px;z-index:60;color:#8b8b8b
       Each of these surfaces only the decisions that need a person.</p>
       <div class="cards">
         <div class="card">
-          <div class="role">Sole builder · scheduled monthly</div>
-          <h4><span class="metric">The LP deck and monthly factsheet build themselves from live fund data.</span></h4>
-          <p>I built the marketing-materials engine end-to-end. A server-side pipeline
-          pulls current fund data, lays out the monthly factsheet as a three-page print
-          document with inline SVG charts, assembles the LP deck, and publishes both to
-          Blob storage. A gated endpoint regenerates everything in one click. New
-          editions go out monthly without anyone touching a design tool.</p>
-          <div class="chips"><span class="chip">TypeScript</span><span class="chip">Next.js</span><span class="chip">FMP</span><span class="chip">SVG Charting</span><span class="chip">Vercel Blob</span><span class="chip">HTML→PDF</span></div>
+          <div class="role">Co-built · regenerates in one click</div>
+          <h4><span class="metric">The LP deck and monthly factsheet rebuild themselves from live fund data.</span></h4>
+          <p>I co-built the hedge fund's marketing materials and automated their
+          upkeep. A pipeline pulls current fund data, lays out the monthly factsheet
+          with charts, assembles the LP deck, and publishes both. One click
+          regenerates everything, so new editions go out without anyone touching a
+          design tool.</p>
+          <div class="chips"><span class="chip">TypeScript</span><span class="chip">FMP</span><span class="chip">Charting</span><span class="chip">HTML→PDF</span></div>
         </div>
         <div class="card">
           <div class="role">Sole builder · PRD to production in days</div>
@@ -383,7 +395,7 @@ footer .foot-inner{position:fixed;bottom:12px;left:28px;z-index:60;color:#8b8b8b
           and sends a formatted digest. It runs on a cloud cron and logs full
           tracebacks when a source breaks. Nobody at the firm reads SEC feeds by hand
           anymore.</p>
-          <div class="chips"><span class="chip">Python</span><span class="chip">Claude API</span><span class="chip">BeautifulSoup</span><span class="chip">Render Cron</span><span class="chip">Google Sheets</span></div>
+          <div class="chips"><span class="chip">Python</span><span class="chip">Claude API</span><span class="chip">Render Cron</span></div>
         </div>
         <div class="card">
           <div class="role">Sole builder · scheduled daily</div>
@@ -393,7 +405,7 @@ footer .foot-inner{position:fixed;bottom:12px;left:28px;z-index:60;color:#8b8b8b
           screens them against marketing-rule criteria with an LLM, routes flagged
           items to a Google Chat clearance workflow, and keeps an append-only archive
           log.</p>
-          <div class="chips"><span class="chip">Python</span><span class="chip">X API</span><span class="chip">Claude API</span><span class="chip">Google Chat</span><span class="chip">Apps Script</span></div>
+          <div class="chips"><span class="chip">Python</span><span class="chip">X API</span><span class="chip">Claude API</span><span class="chip">Google Chat</span></div>
         </div>
         <div class="card">
           <div class="role">Sole builder · quarterly filings</div>
@@ -422,10 +434,10 @@ footer .foot-inner{position:fixed;bottom:12px;left:28px;z-index:60;color:#8b8b8b
       Strategy details are deliberately vague.</p>
       <div class="cards">
         <div class="card">
-          <div class="role">Architect &amp; lead builder · replaced a paid product</div>
+          <div class="role">Architect &amp; builder · replaced a paid product</div>
           <h4><span class="metric">I architected and rebuilt the fund's dilution screener from the ground up.</span></h4>
           <p>This became the screener the desk sources shorts from, and it replaced a
-          commercial subscription. It ingests offering, ATM, warrant, and convertible
+          retail-tier commercial tool with institutional-grade coverage. It ingests offering, ATM, warrant, and convertible
           filings, tracks shares outstanding against a verified baseline to measure
           how fast companies are issuing stock, extracts financing terms with an LLM
           and ties them to the financiers behind them, and ranks everything with a
@@ -435,19 +447,19 @@ footer .foot-inner{position:fixed;bottom:12px;left:28px;z-index:60;color:#8b8b8b
           purged the junk, recovered the lost companies, and checked short-borrow data
           against outside references. Shipped in phased releases and validated with a
           backtest.</p>
-          <div class="chips"><span class="chip">TypeScript</span><span class="chip">Next.js</span><span class="chip">FMP</span><span class="chip">SEC Filings</span><span class="chip">LLM Extraction</span><span class="chip">Postgres</span><span class="chip">Data Auditing</span></div>
+          <div class="chips"><span class="chip">TypeScript</span><span class="chip">FMP</span><span class="chip">SEC Filings</span><span class="chip">LLM Extraction</span><span class="chip">Postgres</span><span class="chip">Data Auditing</span></div>
         </div>
         <div class="card">
-          <div class="role">Sole builder · 100% of commits</div>
-          <h4><span class="metric">Backtests any FinTwit account's stock picks, cheaply and at scale.</span></h4>
-          <p>A tool that scores whether a public X account's stock calls have actually
-          made money. It pulls full posting history (with fallbacks for accounts X
-          hides from search), extracts the calls with an LLM, prices each one across
-          horizons from a day to a year, and caches everything so reports rebuild
-          for free. A cheap-primary, strong-spot-check model stack keeps it affordable
-          to run across many accounts. Runs as a hosted web app with 16 test modules
-          behind it.</p>
-          <div class="chips"><span class="chip">Python</span><span class="chip">X API</span><span class="chip">DeepSeek + Claude</span><span class="chip">FMP</span><span class="chip">Render</span></div>
+          <div class="role">Sole builder</div>
+          <h4><span class="metric">Scored the stock calls of thousands of X accounts to find the ones worth copy-trading.</span></h4>
+          <p>A backtester that measures whether a public X account's stock calls
+          actually made money. It pulls full posting history, extracts the calls with
+          an LLM, prices each one across horizons from a day to a year, and caches
+          everything so reports rebuild for free. Two things made that scale
+          affordable: a two-model LLM stack that cut inference cost about 85%, and an
+          alternative data source that cut collection cost from four figures to under
+          $100.</p>
+          <div class="chips"><span class="chip">Python</span><span class="chip">X data</span><span class="chip">DeepSeek + Claude</span><span class="chip">FMP</span><span class="chip">Render</span></div>
         </div>
       </div>
     </div>
@@ -465,7 +477,7 @@ footer .foot-inner{position:fixed;bottom:12px;left:28px;z-index:60;color:#8b8b8b
           documents, LP-scoped fund documents, and a full re-subscription flow with
           in-portal signing, all fed by a nightly NAV sync. It shipped to production
           with real investor data.</p>
-          <div class="chips"><span class="chip">Next.js</span><span class="chip">TypeScript</span><span class="chip">Postgres</span><span class="chip">Cron Sync</span><span class="chip">E-sign</span></div>
+          <div class="chips"><span class="chip">TypeScript</span><span class="chip">Postgres</span><span class="chip">Cron Sync</span><span class="chip">E-sign</span></div>
         </div>
         <div class="card">
           <div class="role">Built the signing engine · onboarding platform</div>
@@ -477,26 +489,16 @@ footer .foot-inner{position:fixed;bottom:12px;left:28px;z-index:60;color:#8b8b8b
           workflows. Auditing the booklets against the code also surfaced
           contradictions in the legal documents themselves, which then got fixed at
           the source.</p>
-          <div class="chips"><span class="chip">Next.js</span><span class="chip">NextAuth</span><span class="chip">Postgres</span><span class="chip">pdf-lib</span><span class="chip">Anvil e-sign</span><span class="chip">Zod</span></div>
+          <div class="chips"><span class="chip">TypeScript</span><span class="chip">Postgres</span><span class="chip">E-sign</span><span class="chip">Questionnaire logic</span></div>
         </div>
         <div class="card">
-          <div class="role">Sole builder · ops tooling</div>
-          <h4><span class="metric">Monthly trading statements reconstructed and filed automatically.</span></h4>
-          <p>A personal-trading-monitor pipeline that rebuilds broker statements from
-          transaction data, renders them with a zero-dependency PDF emitter, and
-          files them to the correct compliance Shared Drive through a service
-          account. Records-register routing mirrored the firm's live folder
-          structure. Nobody assembles these by hand anymore.</p>
-          <div class="chips"><span class="chip">TypeScript</span><span class="chip">Plaid</span><span class="chip">Google Drive API</span><span class="chip">PDF Generation</span><span class="chip">Neon</span></div>
-        </div>
-        <div class="card">
-          <div class="role">Feature builds · review tooling</div>
+          <div class="role">Sole builder · review tooling</div>
           <h4><span class="metric">Email review: mailbox export in, finished workpaper out.</span></h4>
           <p>Upload a raw .mbox export and get back a statistically sampled,
           LLM-classified XLSX workpaper. I also built a best-execution monitor with
           dollar-volume band filters and wired the 13F builder into the platform,
           gated to firm admins.</p>
-          <div class="chips"><span class="chip">postal-mime</span><span class="chip">ExcelJS</span><span class="chip">Claude API</span><span class="chip">Best-Ex</span></div>
+          <div class="chips"><span class="chip">Claude API</span><span class="chip">Statistical sampling</span><span class="chip">Excel workpaper</span><span class="chip">Best-Ex</span></div>
         </div>
       </div>
     </div>
@@ -536,12 +538,38 @@ footer .foot-inner{position:fixed;bottom:12px;left:28px;z-index:60;color:#8b8b8b
         </div>
         <div class="card">
           <div class="role">AI-native workflow</div>
-          <h4><span class="metric">I build with AI tooling, and the commit history shows exactly how.</span></h4>
-          <p>My repos read like build logs: numbered prompt-phase commits from PRD to
-          production, audit passes with validation dates, and handoff docs so work
-          continues across machines. I lean on AI tools hard and verify everything
-          myself. That combination is why one person can ship this much.</p>
-          <div class="chips"><span class="chip">Claude Code</span><span class="chip">PRD-first</span><span class="chip">Phased Delivery</span></div>
+          <h4><span class="metric">I direct AI coding agents, and I verify everything they produce.</span></h4>
+          <p>I build mainly with Claude Code: multi-agent workflows, few-shot
+          examples, pre- and post-tool-use hooks, and deliberate context management.
+          My repos read like build logs, with numbered phase commits from PRD to
+          production, audit passes, and handoff docs. I lean on the tools hard and
+          check the output myself, which is why one person can ship this much.</p>
+          <div class="chips"><span class="chip">Claude Code</span><span class="chip">Multi-agent workflows</span><span class="chip">PRD-first</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INDEPENDENT -->
+    <div class="tabpane" id="p-ind">
+      <p class="pane-desc">What I have built on my own since leaving Militia in August 2026.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="role">Personal project · Sep 2026 to present</div>
+          <h4><span class="metric">A trading bot that fades retail mispricings on Polymarket sports markets.</span></h4>
+          <p>It detects prices that retail flow has pushed away from sharper
+          reference prices and takes small positions against them. I backtested
+          cross-venue divergences before trading, and execution runs automatically
+          on a VPS.</p>
+          <div class="chips"><span class="chip">Backtesting</span><span class="chip">Automated execution</span><span class="chip">VPS</span></div>
+        </div>
+        <div class="card">
+          <div class="role">Bocconi University (BAFIR) · Oct 2026 to present</div>
+          <h4><span class="metric">The dataset behind a private credit research project.</span></h4>
+          <p>Working with Bocconi researchers, I am building schedules of investments
+          for every business development company across five years of SEC filings,
+          parsed from both XBRL-tagged and HTML-only filings into one structured
+          file.</p>
+          <div class="chips"><span class="chip">SEC filings</span><span class="chip">XBRL</span><span class="chip">HTML parsing</span></div>
         </div>
       </div>
     </div>
@@ -550,27 +578,27 @@ footer .foot-inner{position:fixed;bottom:12px;left:28px;z-index:60;color:#8b8b8b
   <!-- STACK -->
   <section id="stack">
     <div class="h-section">Stack</div>
-    <div class="h-sub">What I actually use, picked per job.</div>
+    <div class="h-sub">What I actually use.</div>
     <div class="stackgrid">
+      <div class="stackcell"><h4>Automation &amp; Systems Design</h4>
+        <div class="chips"><span class="chip ghost">Process mapping</span><span class="chip ghost">Spec-first builds</span><span class="chip ghost">Scheduled unattended pipelines</span><span class="chip ghost">Data validation &amp; reconciliation</span><span class="chip ghost">Audit trails</span></div></div>
+      <div class="stackcell"><h4>LLM Pipelines</h4>
+        <div class="chips"><span class="chip ghost">LLM APIs</span><span class="chip ghost">Structured extraction</span><span class="chip ghost">Classification</span><span class="chip ghost">Human-in-the-loop review</span><span class="chip ghost">Inference cost optimization</span></div></div>
+      <div class="stackcell"><h4>Agentic Development</h4>
+        <div class="chips"><span class="chip ghost">Claude Code</span><span class="chip ghost">Multi-agent workflows</span><span class="chip ghost">Few-shot prompting</span><span class="chip ghost">Tool-use hooks</span><span class="chip ghost">Context management</span></div></div>
       <div class="stackcell"><h4>Languages</h4>
-        <div class="chips"><span class="chip ghost">Python</span><span class="chip ghost">TypeScript</span><span class="chip ghost">SQL</span><span class="chip ghost">Bash / PowerShell</span></div></div>
-      <div class="stackcell"><h4>Web &amp; Platforms</h4>
-        <div class="chips"><span class="chip ghost">Next.js / React</span><span class="chip ghost">NextAuth</span><span class="chip ghost">Tailwind</span><span class="chip ghost">Vercel</span><span class="chip ghost">Render</span></div></div>
-      <div class="stackcell"><h4>Data</h4>
-        <div class="chips"><span class="chip ghost">Postgres / Neon</span><span class="chip ghost">FMP</span><span class="chip ghost">Market-data APIs</span><span class="chip ghost">X / twitterapi.io</span><span class="chip ghost">Google Sheets</span></div></div>
-      <div class="stackcell"><h4>AI / LLM</h4>
-        <div class="chips"><span class="chip ghost">Claude API</span><span class="chip ghost">DeepSeek</span><span class="chip ghost">Extraction pipelines</span><span class="chip ghost">Cost optimization</span></div></div>
-      <div class="stackcell"><h4>Integrations</h4>
-        <div class="chips"><span class="chip ghost">Plaid</span><span class="chip ghost">Google Drive / Chat</span><span class="chip ghost">X API</span><span class="chip ghost">Anvil</span><span class="chip ghost">Postmark</span></div></div>
-      <div class="stackcell"><h4>Documents</h4>
-        <div class="chips"><span class="chip ghost">pdf-lib / pdfjs</span><span class="chip ghost">HTML→PDF typesetting</span><span class="chip ghost">ExcelJS</span><span class="chip ghost">XML Schema</span></div></div>
+        <div class="chips"><span class="chip ghost">Python</span><span class="chip ghost">TypeScript</span><span class="chip ghost">SQL</span><span class="chip ghost">Bash</span></div></div>
+      <div class="stackcell"><h4>Infrastructure</h4>
+        <div class="chips"><span class="chip ghost">Vercel</span><span class="chip ghost">Render</span><span class="chip ghost">Neon Postgres</span><span class="chip ghost">Git</span></div></div>
+      <div class="stackcell"><h4>Finance &amp; Accounting</h4>
+        <div class="chips"><span class="chip ghost">QuickBooks Online</span><span class="chip ghost">Ramp</span><span class="chip ghost">Excel</span><span class="chip ghost">Financial Modeling Prep</span></div></div>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact">
     <div class="h-section">Contact</div>
-    <div class="h-sub">Open to automation, platform, and AI-systems engineering roles.</div>
+    <div class="h-sub">Seeking a summer 2027 internship in applied AI, automation, or platform engineering.</div>
     <div class="contact-box">
       <div class="big">Let's build something<br>that runs itself.</div>
       <div class="contact-links">
@@ -581,11 +609,11 @@ footer .foot-inner{position:fixed;bottom:12px;left:28px;z-index:60;color:#8b8b8b
       </div>
     </div>
     <div class="confid">
-      CONFIDENTIALITY — All work shown was done for Militia Capital. Descriptions are
-      deliberately abstracted: no fund performance, positions, investor information,
-      confidential document contents, or non-public strategy details appear here.
-      Source repositories are private. Code walkthroughs can be arranged with the
-      firm's consent.
+      CONFIDENTIALITY: The Militia work shown was done for Militia Investments and
+      Militia Capital Management. Descriptions are deliberately abstracted: no fund
+      performance, positions, investor information, confidential document contents,
+      or non-public strategy details appear here. Source repositories are private
+      and remain with the firm.
     </div>
   </section>
 
@@ -600,7 +628,7 @@ footer .foot-inner{position:fixed;bottom:12px;left:28px;z-index:60;color:#8b8b8b
 <div class="modal-backdrop" id="resumeModal" onclick="if(event.target===this)closeResume()">
   <div class="modal" role="dialog" aria-modal="true" aria-label="Resume">
     <div class="modal-head">
-      <span class="mh-title">Resume — Ardal Inesi</span>
+      <span class="mh-title">Resume · Ardal Inesi</span>
       <span class="mh-actions">
         <a href="resume.pdf" download="Ardal-Inesi-Resume.pdf">Download PDF</a>
         <button type="button" class="mh-close" onclick="closeResume()">✕ Close</button>
